@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two&family=Source+Sans+Pro&display=swap');
+
+/** {
+    border: 1px solid red;
+}*/
+
+.dark-bg {
+    background-color: #282A36;
+}
+
+.black-bg {
+    background-color: #21222c;
+}
+
+.white {
+    color: #F8F8F2;
+}
+
+.purple {
+    color: #bd93f9;
+}
+
+.green {
+    color: #50fa7b;
+}
+
+body {
+    background-color: #282A36;
+    color: #F8F8F2;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flex-box {
+    flex: 1;
+    margin: 0;
+    padding: 0;
+}
+
+.title {
+    font-size: 72px;
+    text-align: center;
+    font-family: 'Lobster Two', cursive;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+}
+
+.subtitle {
+    font-size: 24px;
+    text-align: center;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    margin: 0;
+    padding: 0 0 20px 0;
+}
+
+.logo-img {
+    width: 450px;
+    height: auto;
+}
+
+footer {
+    height: 30px;
+    font-size: 16px;
+    text-align: center;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+}
+
+
