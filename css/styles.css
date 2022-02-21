@@ -10,23 +10,45 @@
     --green: #50fa7b;
     --white: #F8F8F2;
     --purple: #bd93f9;
+    --blue: #8be9fd;
+    --pink: #ff79c6;
+    --orange: #ffca80;
 }
 
+
 body {
+    background-color: var(--black);
+}
+
+.dark-box {
     background-color: var(--dark);
+    margin: 0;
+    padding: 0;
+}
+
+.flex-columns {
+    flex-direction: column;
+}
+
+.flex-row {
+    flex-direction: row;
+    gap: 10px;
+}
+
+.flex-2 {
+    flex-grow: 2;
+    flex-basis: auto;
+}
+
+.flex-1 {
+    flex-grow: 1;
+    flex-basis: auto;
 }
 
 .flex-container {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    background-color: var(--dark);
-}
-
-.flex-box {
-    flex: 1;
-    margin: 0;
-    padding: 0;
+    justify-content: center;
 }
 
 .title {
@@ -63,34 +85,63 @@ span {
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 400;
     color: var(--white);
+    text-decoration: none;
 }
 
 footer {
-    height: 30px;
-    font-size: 16px;
+    height: auto;
     text-align: center;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: 400;
-    color: var(--white);
-    background-color: var(--black);
+    padding-top: 10px;
 }
 
 br {
     margin-bottom: 10px;
 }
 
-.decode-btn {
+.btn {
     border-radius: 4px;
     text-align: center;
-    font-weight: 400;
     padding: 5px 15px;
-    font-size: 16px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 400;
     border: 0;
-    background-color: var(--green);
     color: var(--dark);
+    font-family: 'Source Sans Pro', sans-serif;
+    text-decoration: none; 
 }
 
-.decode-btn:hover {
+.convert-btn {
+    background-color: var(--green);
+}
+
+.convert-btn:hover {
     background-color: var(--black);
     color: var(--green);
+}
+
+.copy-btn {
+    background-color: var(--blue);
+}
+
+.copy-btn:hover {
+    background-color: var(--black);
+    color: var(--blue);
+}
+
+.site-btn {
+    background-color: var(--pink);
+}
+
+.site-btn:hover {
+    background-color: var(--black);
+    color: var(--pink);
+}
+
+a:hover {
+    color: var(--purple);
+}
+
+.enlarge {
+    padding-bottom: 250px;
 }

@@ -6,25 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WebTransfer Tailor</title>
     <link rel="stylesheet" href="./css/styles.css">
+    <script type="text/javascript" src="./js/script.js"></script>
 </head>
 <body>
-    <div class="flex-container"> 
-        <div class="flex-container">
-            <img class="flex-box logo-img" src="./img/logo.png" alt="Logo"> 
-            <h1 class="title flex-box">WebTransfer Tailor</h1> 
+    <div class="flex-container flex-columns dark-box"> 
+        <div class="flex-container flex-columns">
+            <img class="logo-img" src="./img/logo.png" alt="Logo"> 
+            <h1 class="title">WebTransfer Tailor</h1> 
             <h2 class="subtitle">Your <span>WebTranfer</span> companion</h2> 
         </div>
-        <div class="flex-box">
-            <form action="">
-                <label for="mail-list" class="txt">Paste here your mailing list:</label>
+        <div class="dark-box">
+            <form action="" method="post">
+                <label for="mailList" class="txt">Paste below your mailing list:</label>
                 <br>
-                <textarea id="mail-list" name="unformatted" rows="10" cols="70">simone.ceccato@previnet.it</textarea>
+                <textarea id="mailList" name="inputList" rows="5" cols="70" placeholder="Surname Name <name.surname@domain>; Surname Name <name.surname@domain>"></textarea>
                 <br>
-                <input type="submit" value="Codifica" class="decode-btn">
+                <div class="flex-container flex-row">
+                    <button class="btn copy-btn flex-1" type="button" onclick="copyText()">Copy</button>
+                    <input type="button" value="Convert" class="btn convert-btn flex-2" onclick="WTTailor();">
+                    <a href="https://webtransfer.previnet.it/" class=" btn site-btn flex-1" target="_blank">Website</a>
+                </div> 
             </form>
         </div>
-        <div class="flex-box">CCCCC</div>
+        <h2 id="alert" class="txt enlarge"></h2>
     </div>
-    <footer>ceccatos</footer>
+    <footer>
+        <a href="https://github.com/ceccatos/ceccatos" target="_blank" class="txt">ceccatos@github.com</a>
+    </footer>
 </body>
 </html>
+
