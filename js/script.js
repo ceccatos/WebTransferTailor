@@ -10,20 +10,17 @@ function WTTailor() {
     if (Boolean(inputList)) {
         // split string into array (semicolon)
         const mailArray = inputList.split(";");
-        // apply string datafix
-        for (const element of mailArray) {
-            if (element.indexOf("<") == -1) {
-                alertItem.innerHTML = "Expected: Surname Name &lt;name.surname@domain&gt;";
-                window.setTimeout("closeAlert();", 4000);
-                alertItem.style.color = "#50fa7b";
-            } 
-            else {
 
-            } 
-            outputList = outputList.concat(element.substring(element.indexOf("<")+1,element.indexOf(">")),";");
-        }
-    } 
-    else {
+        if (inputList.indexOf("<") == -1) {
+            alertItem.innerHTML = "Expected: Surname Name &lt;name.surname@domain&gt;";
+            window.setTimeout("closeAlert();", 4000);
+            alertItem.style.color = "#50fa7b";
+        } else 
+            // apply string datafix
+            for (const element of mailArray) {
+                    outputList = outputList.concat(element.substring(element.indexOf("<")+1,element.indexOf(">")),";");
+            }
+    } else {
         alertItem.innerHTML = "No input defined";
         window.setTimeout("closeAlert();", 4000);
         alertItem.style.color = "#50fa7b";
